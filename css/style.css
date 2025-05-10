@@ -2345,12 +2345,12 @@ textarea.form-control {
   color: #818491;
   text-decoration: none;
 }
-
+/*
 .btn:focus, .btn.focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 156, 255, 0.25);
 }
-
+*/
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
 }
@@ -9635,6 +9635,8 @@ h4, h5, h6 {
 .gallery-item:hover .img-fluid,
 .project-item:hover .img-fluid {
   transform: scale(1.2);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
 
 .product-img a,
@@ -9777,4 +9779,9 @@ h4, h5, h6 {
 
 #services {
   padding-top: 50px;
+}
+
+.info-span {
+  font-size: 1.25rem;
+  font-weight: 400;
 }
