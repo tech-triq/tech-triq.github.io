@@ -365,7 +365,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   line-height: 1.2;
-  color: #22395d;
+  color: #004553;
 }
 
 h1, .h1 {
@@ -6189,7 +6189,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #004b59 !important;
+  background-color: #002229 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -9575,7 +9575,7 @@ h4, h5, h6 {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #04d9ff;
+  color: #00d8ff;
 }
 
 @media (max-width: 991.98px) {
