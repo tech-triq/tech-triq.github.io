@@ -36,8 +36,8 @@ const views = {
   };
 
   async function createEnvironmentSphere() {
-    const imageUrl = "https://i.ibb.co/bvNfJdR/palermo-square.jpg"
-    // const imageUrl = "https://static.vecteezy.com/system/resources/previews/019/924/465/large_2x/aerial-full-seamless-spherical-hdri-360-panorama-view-from-great-height-over-wide-avenue-in-provincial-town-in-equirectangular-projection-may-use-like-sky-replacement-for-drone-360-panorama-photo.jpgs"
+    // const imageUrl = "https://i.ibb.co/bvNfJdR/palermo-square.jpg"
+    const imageUrl = "../img/ambit-ext.jpg"
     const environmentMap = await new THREE.TextureLoader().loadAsync(imageUrl)
     environmentMap.mapping = THREE.EquirectangularReflectionMapping
     environmentMap.colorSpace = THREE.SRGBColorSpace
