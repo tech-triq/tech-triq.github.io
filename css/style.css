@@ -56,7 +56,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.5;
   color: #6c757d;
@@ -265,6 +265,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+  appearance: button;
   -webkit-appearance: button;
 }
 
@@ -330,6 +331,7 @@ progress {
 
 [type="search"] {
   outline-offset: -2px;
+  appearance: none;
   -webkit-appearance: none;
 }
 
@@ -3485,7 +3487,7 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  color-adjust: exact;
+  /* color-adjust: exact; */
 }
 
 .custom-control-inline {
@@ -6639,6 +6641,7 @@ button.bg-dark:focus {
 
 .align-items-center {
   align-items: center !important;
+  justify-content: center;
 }
 
 .align-items-baseline {
@@ -9671,10 +9674,10 @@ h4, h5, h6 {
 
 .project-item .btn-project-features {
   position: absolute;
-  width: 350px;
+  width: 340px;
   height: 300px;
   top: calc(50% - 130px);
-  left: calc(50% - 180px);
+  left: calc(50% - 170px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9772,9 +9775,6 @@ h4, h5, h6 {
   font-size: 1.5rem;
   text-shadow: 4px 4px 6px black;
   font-weight: bold;
-}
-
-.btn-project:hover {
 }
 
 #services {

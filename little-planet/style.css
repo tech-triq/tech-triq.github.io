@@ -2,24 +2,24 @@ html {
   overflow: hidden;
 }
 button {
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
+  /* background: rgba(0, 0, 0, 0.7);
+  color: white; */
   position: absolute;
   top: 50px;
-  padding: 10px 20px;
-  border: none;
+  /* padding: 10px 20px; */
+  /* border: none;
   border-radius: 5px;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s; */
 }
 button:first-of-type {
   left: 30px;
+  bottom: 20px;
+  top: auto;
 }
 button:last-of-type {
   right: 30px;
-}
-button:hover {
-  opacity: 0.7;
-  cursor: pointer;
+  bottom: 20px;
+  top: auto;
 }
 container {
   width: 100%;

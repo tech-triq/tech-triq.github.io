@@ -2,7 +2,7 @@ import * as THREE from "three"
 import CameraControls from "camera-controls"
 
 const canvas = document.querySelector("canvas")
- const [panoramaButton, littlePlanetButton] = document.querySelectorAll("button") 
+const panoramaButton = document.getElementById("changeView") 
 
 const clock = new THREE.Clock()
 const animationSpeed = 0.2
@@ -29,11 +29,15 @@ const views = {
   const [scene, renderer, camera, cameraControls] = createScene()
 
   setView({ ...views.littlePlanet, animated: false })
-  panoramaButton.onclick = () => setView(views.panorama)
-  littlePlanetButton.onclick = () => setView(views.littlePlanet)
+  let currentView = "littlePlanet";
+  panoramaButton.onclick = () => {
+    currentView = currentView === "littlePlanet" ? "panorama" : "littlePlanet";
+    setView(views[currentView]);
+  };
 
   async function createEnvironmentSphere() {
-    const imageUrl = "https://i.ibb.co/bvNfJdR/palermo-square.jpg"
+    // const imageUrl = "https://i.ibb.co/bvNfJdR/palermo-square.jpg"
+    const imageUrl = "../img/ambit-ext.jpg"
     const environmentMap = await new THREE.TextureLoader().loadAsync(imageUrl)
     environmentMap.mapping = THREE.EquirectangularReflectionMapping
     environmentMap.colorSpace = THREE.SRGBColorSpace
