@@ -109,6 +109,16 @@
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
         ],
     });
+
+    $(document).ready(function () {
+        $(".count-up").hover(function (e) {
+            var $this = $(this),
+                description = "Get a Quote";
+            $('.count-up').html(description);
+        }, function (e) {
+            $('.count-up').html('Projects Done: 50 +');
+        });
+    });
     
 })(jQuery);
 
@@ -130,3 +140,28 @@ function closeIframe(){
     title.innerHTML = "";
 
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var countUpElements = document.querySelectorAll('.count-up');
+
+    countUpElements.forEach(function(element) {
+      var targetValue = parseInt(element.getAttribute('data-target'));
+      var startValue = 0;
+      var duration = 2500; // 2 seconds
+
+      var step = function() {
+        var progress = startValue / targetValue;
+        element.textContent = Math.floor(startValue);
+
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+          startValue += targetValue / (duration / 16);
+          element.textContent = "Projects Done: " + Math.floor(startValue) + " +";
+        } else {
+          element.textContent = "Projects Done: " + targetValue + " +";
+        }
+      };
+
+      step();
+    });
+});
