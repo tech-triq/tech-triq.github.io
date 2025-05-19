@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
     countUpElements.forEach(function(element) {
       var targetValue = parseInt(element.getAttribute('data-target'));
       var startValue = 0;
-      var duration = 2500; // 2 seconds
+      var duration = 7500;
 
       var step = function() {
         var progress = startValue / targetValue;
