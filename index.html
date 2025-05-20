@@ -61,7 +61,7 @@
                 <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-2" style="max-width: 900px;">
-                            <h3 class="display-3 font-secondary text-white mb-4">Your Property<br>Beautifully Marketed</h6>
+                            <h3 class="display-3 font-secondary text-white mb-4">Your Property<br>Beautifully Marketed</h3>
                             <!-- <h3 class="display-5 text-white mb-4">Projects Done: <span class="count-up" data-target="50" >0</span></h3>
                             <br> -->
                             <a class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll count-up" data-target="50" href="#contact" style="font-size: 1.2rem; width: 18rem;">Projects Done: </a>
@@ -95,7 +95,7 @@
 
     <!-- About Start -->
     <div class="container-fluid py-5" id="about">
-        <div class="container py-">
+        <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <!-- <img class="img-fluid mb-4 mb-lg-0" src="img/about.jpg" alt=""> -->
@@ -169,7 +169,7 @@
                     <div class="product-item mb-2">
                         <div class="project-item">
                             <img class="img-fluid" src="img/webar.webp" alt="">
-                            <a class="btn btn-project-features"href="/webar-brochure">
+                            <a class="btn btn-project-features" href="/webar-brochure">
                                 <p>Bring your brochure to life with immersive our ML based Augmented Reality Solutionspace<br><br><span class="info-span">Click to Know More</span></p>
                             </a>
                         </div>
@@ -258,7 +258,7 @@
         <div class="owl-carousel gallery-carousel">
             <div class="project-item">
                 <img class="img-fluid w-100" src="img/ambit.webp" alt="">
-                <a class="btn btn-project" href="img/ambit.webp" data-toggle="modal" data-target="#projectModal" onclick="loadIframe(src='//storage.net-fs.com/hosting/8311954/0/', name='Ambit - Primoris')">
+                <a class="btn btn-project" href="img/ambit.webp" data-toggle="modal" data-target="#projectModal" onclick="loadIframe('//storage.net-fs.com/hosting/8311954/0/', 'Ambit - Primoris')">
                     <!-- <i class="fa fa-2x fa-plus text-white"></i> -->
                     <p>AMBIT PRIMORIS<br><span class="info-span">Interactive Virtual Tour</span></p>
                 </a>
@@ -272,7 +272,7 @@
             </div>
             <div class="project-item">
                 <img class="img-fluid w-100" src="img/lotus.webp" alt="">
-                <a class="btn btn-project" href="img/lotus.webp" data-toggle="modal" data-target="#projectModal" onclick="loadIframe(src='//lotus-drone-view.netlify.app/', name='Lotus Developers')">
+                <a class="btn btn-project" href="img/lotus.webp" data-toggle="modal" data-target="#projectModal" onclick="loadIframe('//lotus-drone-view.netlify.app/', 'Lotus Developers')">
                     <!-- <i class="fa fa-2x fa-plus text-white"></i> -->
                     <p>LOTUS DEVELOPERS<br><span class="info-span">Aerial 360° Tour</span></p>
                 </a>
@@ -417,7 +417,7 @@
                     <div class="col-md-4">
                         <div class="text-md-center">
                             <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">Call Us</h5>
-                            <a class="m-0s" href="tel:917710000963" style="color: white;">+91 7710000963</a>
+                            <a class="m-0s" href="tel:+917710000963" style="color: white;">+91 7710000963</a>
                         </div>
                     </div>
                 </div>
@@ -425,7 +425,7 @@
         </div>
     </div>
     <div class="container-fluid bg-dark text-white text-center border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .05) !important;">
-        <p class="m-0 text-white">&copy; <a href="#">tech-triq.com</a>. All Rights Reserved. Designed by <a href="https://infinitysquaredtech.com" target="_blank">Infinity Squard Technologies</a></p>
+        <p class="m-0 text-white">&copy; <span id="currentYear"></span> <a href="#">tech-triq.com</a>. All Rights Reserved. Designed by <a href="https://infinitysquaredtech.com" target="_blank">Infinity Squared Technologies</a></p>
     </div>
     <!-- Footer End -->
 
@@ -457,7 +457,14 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        if (typeof jQuery == 'undefined') {
+            var script = document.createElement('script');
+            script.src = '../lib/jquery/jquery-3.7.1.min.js';
+            document.head.appendChild(script);
+        }
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
@@ -469,8 +476,17 @@
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 
+    <script>
+        function closeIframe() {
+            const iframe = document.getElementById('projectFrame');
+            iframe.src = '';
+        }
+    </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>

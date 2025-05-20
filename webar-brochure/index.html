@@ -322,7 +322,7 @@
                     <div class="col-md-4">
                         <div class="text-md-center">
                             <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">Call Us</h5>
-                            <a class="m-0s" href="tel:917710000963" style="color: white;">+91 7710000963</a>
+                            <a class="m-0s" href="tel:+917710000963" style="color: white;">+91 7710000963</a>
                         </div>
                     </div>
                 </div>
@@ -330,7 +330,7 @@
         </div>
     </div>
     <div class="container-fluid bg-dark text-white text-center border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .05) !important;">
-        <p class="m-0 text-white">&copy; <a href="#">tech-triq.com</a>. All Rights Reserved. Designed by <a href="https://infinitysquaredtech.com" target="_blank">Infinity Squard Technologies</a></p>
+        <p class="m-0 text-white">&copy; <span id="currentYear"></span> <a href="#">tech-triq.com</a>. All Rights Reserved. Designed by <a href="https://infinitysquaredtech.com" target="_blank">Infinity Squared Technologies</a></p>
     </div>
     <!-- Footer End -->
 
@@ -343,13 +343,20 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        if (typeof jQuery == 'undefined') {
+            var script = document.createElement('script');
+            script.src = '../lib/jquery/jquery-3.7.1.min.js';
+            document.head.appendChild(script);
+        }
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="../lib/easing/easing.min.js"></script>
     <script src="../lib/waypoints/waypoints.min.js"></script>
     <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="../lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="../lib/lightbox/js/lightbox.min.js"></script>
+    <script src="../js/main.js" defer></script>
 
     <!-- Contact Javascript File -->
     <script src="../mail/jqBootstrapValidation.min.js"></script>
@@ -357,6 +364,9 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
