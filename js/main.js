@@ -110,6 +110,23 @@
         ],
     });
 
+    // Clients carousel
+    $(".client-carousel").owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 1550,
+        smartSpeed: 1500,
+        items: 8,
+        dots: false,
+        loop: true,
+        nav : false,
+        responsive: {
+            0: { items: 2 },
+            576: { items: 4 },
+            768: { items: 6 },
+            992: { items: 8 }
+        }
+    });
+
     $(document).ready(function () {
         $(".count-up").hover(function (e) {
             var $this = $(this),
@@ -165,3 +182,25 @@ document.addEventListener('DOMContentLoaded', function() {
       step();
     });
 });
+
+document.addEventListener('click', function(event) {
+    var navbarCollapse = document.getElementById('navbarCollapse');
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    // Only proceed if navbar is open and click is outside navbar and toggler
+    if (
+        navbarCollapse.classList.contains('show') &&
+        !navbarCollapse.contains(event.target) &&
+        !navbarToggler.contains(event.target)
+    ) {
+        navbarToggler.click();
+    }
+});
+
+function closeNavbarOnClick() {
+    var navbarCollapse = document.getElementById('navbarCollapse');
+    var navbarToggler = document.querySelector('.navbar-toggler');
+
+    if (navbarCollapse.classList.contains('show')) {
+        navbarToggler.click();
+    }
+}

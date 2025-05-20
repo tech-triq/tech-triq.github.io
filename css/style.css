@@ -9712,7 +9712,8 @@ h4, h5, h6 {
 }
 
 .gallery-carousel .owl-nav,
-.testimonial-carousel .owl-nav {
+.testimonial-carousel .owl-nav,
+.client-carousel .owl-nav {
   position: absolute;
   width: 135px;
   height: 60px;
@@ -9727,7 +9728,9 @@ h4, h5, h6 {
 .gallery-carousel .owl-nav .owl-prev,
 .gallery-carousel .owl-nav .owl-next,
 .testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
+.testimonial-carousel .owl-nav .owl-next,
+.client-carousel .owl-nav .owl-prev,
+.client-carousel .owl-nav .owl-next {
   width: 60px;
   height: 60px;
   display: flex;
@@ -9739,7 +9742,9 @@ h4, h5, h6 {
 }
 
 .testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
+.testimonial-carousel .owl-nav .owl-next,
+.client-carousel .owl-nav .owl-prev,
+.client-carousel .owl-nav .owl-next {
   color: #FFFFFF;
   background: #04d9ff;
 }
