@@ -471,6 +471,18 @@ h6, .h6 {
   }
 }
 
+.display-5 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+@media (max-width: 1200px) {
+  .display-5 {
+    font-size: calc(1.075rem + 2.2vw) ;
+  }
+}
+
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -2598,6 +2610,7 @@ fieldset:disabled a.btn {
   color: #212529;
   background-color: #04d9ff;
   border-color: #FFFFFF;
+  content: "Get a Quote";
 }
 
 .btn-light:focus, .btn-light.focus {
@@ -2618,6 +2631,7 @@ fieldset:disabled a.btn {
   color: #212529;
   background-color: #17a2b8;
   border-color: #dfdfdf;
+  content: "Get a Quote";
 }
 
 .btn-light:not(:disabled):not(.disabled):active:focus, .btn-light:not(:disabled):not(.disabled).active:focus,
@@ -9693,12 +9707,13 @@ h4, h5, h6 {
 }
 
 .bg-gallery {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/gallery.jpg), no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/webar.webp), no-repeat center center;
   background-size: cover;
 }
 
 .gallery-carousel .owl-nav,
-.testimonial-carousel .owl-nav {
+.testimonial-carousel .owl-nav,
+.client-carousel .owl-nav {
   position: absolute;
   width: 135px;
   height: 60px;
@@ -9713,7 +9728,9 @@ h4, h5, h6 {
 .gallery-carousel .owl-nav .owl-prev,
 .gallery-carousel .owl-nav .owl-next,
 .testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
+.testimonial-carousel .owl-nav .owl-next,
+.client-carousel .owl-nav .owl-prev,
+.client-carousel .owl-nav .owl-next {
   width: 60px;
   height: 60px;
   display: flex;
@@ -9725,7 +9742,9 @@ h4, h5, h6 {
 }
 
 .testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
+.testimonial-carousel .owl-nav .owl-next,
+.client-carousel .owl-nav .owl-prev,
+.client-carousel .owl-nav .owl-next {
   color: #FFFFFF;
   background: #04d9ff;
 }

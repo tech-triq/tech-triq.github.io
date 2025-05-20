@@ -109,6 +109,33 @@
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
         ],
     });
+
+    // Clients carousel
+    $(".client-carousel").owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 1550,
+        smartSpeed: 1500,
+        items: 8,
+        dots: false,
+        loop: true,
+        nav : false,
+        responsive: {
+            0: { items: 2 },
+            576: { items: 4 },
+            768: { items: 6 },
+            992: { items: 8 }
+        }
+    });
+
+    $(document).ready(function () {
+        $(".count-up").hover(function (e) {
+            var $this = $(this),
+                description = "Get a Quote";
+            $('.count-up').html(description);
+        }, function (e) {
+            $('.count-up').html('Projects Done: 50 +');
+        });
+    });
     
 })(jQuery);
 
@@ -129,4 +156,51 @@ function closeIframe(){
     iframe.name = "";
     title.innerHTML = "";
 
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var countUpElements = document.querySelectorAll('.count-up');
+
+    countUpElements.forEach(function(element) {
+      var targetValue = parseInt(element.getAttribute('data-target'));
+      var startValue = 0;
+      var duration = 7500;
+
+      var step = function() {
+        var progress = startValue / targetValue;
+        element.textContent = Math.floor(startValue);
+
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+          startValue += targetValue / (duration / 16);
+          element.textContent = "Projects Done: " + Math.floor(startValue) + " +";
+        } else {
+          element.textContent = "Projects Done: " + targetValue + " +";
+        }
+      };
+
+      step();
+    });
+});
+
+document.addEventListener('click', function(event) {
+    var navbarCollapse = document.getElementById('navbarCollapse');
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    // Only proceed if navbar is open and click is outside navbar and toggler
+    if (
+        navbarCollapse.classList.contains('show') &&
+        !navbarCollapse.contains(event.target) &&
+        !navbarToggler.contains(event.target)
+    ) {
+        navbarToggler.click();
+    }
+});
+
+function closeNavbarOnClick() {
+    var navbarCollapse = document.getElementById('navbarCollapse');
+    var navbarToggler = document.querySelector('.navbar-toggler');
+
+    if (navbarCollapse.classList.contains('show')) {
+        navbarToggler.click();
+    }
 }

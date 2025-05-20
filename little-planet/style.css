@@ -12,12 +12,12 @@ button {
   transition: opacity 0.3s; */
 }
 button:first-of-type {
-  left: 30px;
+  left: 10px;
   bottom: 20px;
   top: auto;
 }
 button:last-of-type {
-  right: 30px;
+  right: 10px;
   bottom: 20px;
   top: auto;
 }

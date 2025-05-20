@@ -40,11 +40,13 @@
                 <img class="navbar-img" src="img/Tech_Trique_logo.png">
             </a>
             <div class="navbar-nav ml-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#service" class="nav-item nav-link">Services</a>
-                <a href="#project" class="nav-item nav-link">Projects</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
+                <a href="#home" class="nav-item nav-link active" onclick="closeNavbarOnClick()">Home</a>
+                <a href="#service" class="nav-item nav-link" onclick=closeNavbarOnClick()>Services</a>
+                <a href="#project" class="nav-item nav-link" onclick=closeNavbarOnClick()>Projects</a>
+                <a href="#clients" class="nav-item nav-link" onclick=closeNavbarOnClick()>Clients</a>
+                <a href="#testimonial" class="nav-item nav-link" onclick=closeNavbarOnClick()>Testimonials</a>
+                <a href="#about" class="nav-item nav-link" onclick=closeNavbarOnClick()>About</a>
+                <a href="#contact" class="nav-item nav-link" onclick=closeNavbarOnClick()>Contact</a>
             </div>
         </div>
     </nav>
@@ -62,7 +64,9 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-2" style="max-width: 900px;">
                             <h3 class="display-3 font-secondary text-white mb-4">Your Property<br>Beautifully Marketed</h3>
-                            <a class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll" href="#contact">Get A Quote</a>
+                            <!-- <h3 class="display-5 text-white mb-4">Projects Done: <span class="count-up" data-target="50" >0</span></h3>
+                            <br> -->
+                            <a class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll count-up" data-target="50" href="#contact" style="font-size: 1.2rem; width: 18rem;">Projects Done: </a>
                       </div>
                     </div>
                 </div>
@@ -93,7 +97,7 @@
 
     <!-- About Start -->
     <div class="container-fluid py-5" id="about">
-        <div class="container py-">
+        <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <!-- <img class="img-fluid mb-4 mb-lg-0" src="img/about.jpg" alt=""> -->
@@ -140,7 +144,7 @@
                 <div class="col-lg-3 mb-3">
                     <div class="product-item mb-2">
                         <div class="project-item">
-                            <img class="img-fluid" src="../img/vr.png" alt="">
+                            <img class="img-fluid" src="../img/vr.webp" alt="">
                             <a class="btn btn-project-features" href="/virtual-tour">
                                 <p>Navigate seamlessly in an interactive, 360°-degree virtual experience to get a fully immersive sense of the space<br><br><span class="info-span">Click to Know More</span></p>
                             </a>
@@ -153,7 +157,7 @@
                 <div class="col-lg-3 mb-3">
                     <div class="product-item mb-2">
                         <div class="project-item">
-                            <img class="img-fluid" src="img/aerial.jpg" alt="">
+                            <img class="img-fluid" src="img/aerial.webp" alt="">
                             <a class="btn btn-project-features" href="/aerial-tour">
                                 <p>Soar over landmarks, cityscapes, and natural landscapes for an immersive, bird's-eye perspectivespace<br><br><span class="info-span">Click to Know More</span></p>
                             </a>
@@ -166,8 +170,8 @@
                 <div class="col-lg-3 mb-3">
                     <div class="product-item mb-2">
                         <div class="project-item">
-                            <img class="img-fluid" src="img/webar.jpg" alt="">
-                            <a class="btn btn-project-features"href="/webar-brochure">
+                            <img class="img-fluid" src="img/webar.webp" alt="">
+                            <a class="btn btn-project-features" href="/webar-brochure">
                                 <p>Bring your brochure to life with immersive our ML based Augmented Reality Solutionspace<br><br><span class="info-span">Click to Know More</span></p>
                             </a>
                         </div>
@@ -179,9 +183,9 @@
                 <div class="col-lg-3 mb-3">
                     <div class="product-item mb-2">
                         <div class="project-item">
-                            <img class="img-fluid" src="img/3d_services.jpg" alt="">
+                            <img class="img-fluid" src="img/interior_design.webp" alt="">
                             <a class="btn btn-project-features" href="/3d-cad-services#interior">
-                                <p>From 3D modeling, Location A/V and rendering to virtual tours, we bring your ideas to life in stunning detailspace<br><br><span class="info-span">Click to Know More</span></p>
+                                <p>Immersive interior renderings that bring your space to life and elevate your design<br><br><span class="info-span">Click to Know More</span></p>
                             </a>
                         </div>
                         <div class="bg-secondary text-center p-4">
@@ -192,9 +196,9 @@
                 <div class="col-lg-3 mb-3">
                     <div class="product-item mb-2">
                         <div class="project-item">
-                            <img class="img-fluid" src="img/3d_services.jpg" alt="">
+                            <img class="img-fluid" src="img/exterior_design.webp" alt="">
                             <a class="btn btn-project-features" href="/3d-cad-services#exterior">
-                                <p>From 3D modeling, Location A/V and rendering to virtual tours, we bring your ideas to life in stunning detailspace<br><br><span class="info-span">Click to Know More</span></p>
+                                <p>From initial concept to breathtaking visualisation, we deliver exterior renderings that elevate your design<br><br><span class="info-span">Click to Know More</span></p>
                             </a>
                         </div>
                         <div class="bg-secondary text-center p-4">
@@ -205,9 +209,9 @@
                 <div class="col-lg-3 mb-3">
                     <div class="product-item mb-2">
                         <div class="project-item">
-                            <img class="img-fluid" src="img/3d_services.jpg" alt="">
+                            <img class="img-fluid" src="img/walkthrough.webp" alt="">
                             <a class="btn btn-project-features" href="/3d-cad-services#walkthrough">
-                                <p>From 3D modeling, Location A/V and rendering to virtual tours, we bring your ideas to life in stunning detailspace<br><br><span class="info-span">Click to Know More</span></p>
+                                <p>Don’t just see it, feel it. Delivering immersive walkthrough videos that bring your design to life<br><br><span class="info-span">Click to Know More</span></p>
                             </a>
                         </div>
                         <div class="bg-secondary text-center p-4">
@@ -218,9 +222,9 @@
                 <div class="col-lg-3 mb-3">
                     <div class="product-item mb-2">
                         <div class="project-item">
-                            <img class="img-fluid" src="img/3d_services.jpg" alt="">
+                            <img class="img-fluid" src="img/locationav.webp" alt="">
                             <a class="btn btn-project-features" href="/3d-cad-services#locationav">
-                                <p>From 3D modeling, Location A/V and rendering to virtual tours, we bring your ideas to life in stunning detailspace<br><br><span class="info-span">Click to Know More</span></p>
+                                <p>We visualize the sonic landscape, creating immersive location A/V for unparalleled spatial design.<br><br><span class="info-span">Click to Know More</span></p>
                             </a>
                         </div>
                         <div class="bg-secondary text-center p-4">
@@ -231,9 +235,9 @@
                 <div class="col-lg-3 mb-3">
                     <div class="product-item mb-2">
                         <div class="project-item">
-                            <img class="img-fluid" src="img/3d_services.jpg" alt="">
+                            <img class="img-fluid" src="img/cgi.webp" alt="">
                             <a class="btn btn-project-features" href="/3d-cad-services#cgi">
-                                <p>From 3D modeling, Location A/V and rendering to virtual tours, we bring your ideas to life in stunning detailspace<br><br><span class="info-span">Click to Know More</span></p>
+                                <p>Bringing your designs to life with photorealistic CGI and superimpose, bridging the gap between concept and creation.<br><br><span class="info-span">Click to Know More</span></p>
                             </a>
                         </div>
                         <div class="bg-secondary text-center p-4">
@@ -255,50 +259,50 @@
         </div>
         <div class="owl-carousel gallery-carousel">
             <div class="project-item">
-                <img class="img-fluid w-100" src="img/ambit.png" alt="">
-                <a class="btn btn-project" href="img/ambit.png" data-toggle="modal" data-target="#projectModal" onclick="loadIframe(src='//storage.net-fs.com/hosting/8311954/0/', name='Ambit - Primoris')">
+                <img class="img-fluid w-100" src="img/ambit.webp" alt="">
+                <a class="btn btn-project" href="img/ambit.webp" data-toggle="modal" data-target="#projectModal" onclick="loadIframe('//storage.net-fs.com/hosting/8311954/0/', 'Ambit - Primoris')">
                     <!-- <i class="fa fa-2x fa-plus text-white"></i> -->
                     <p>AMBIT PRIMORIS<br><span class="info-span">Interactive Virtual Tour</span></p>
                 </a>
             </div>
             <div class="project-item">
-                <img class="img-fluid w-100" src="img/rajshree.png" alt="">
-                <a class="btn btn-project" href="img/rajshree.png" data-toggle="modal" data-target="#projectModal" onclick="loadIframe(src='//storage.net-fs.com/hosting/8311954/1/', name='Rajshree - Aranya Heights')">
+                <img class="img-fluid w-100" src="img/rajshree.webp" alt="">
+                <a class="btn btn-project" href="img/rajshree.webp" data-toggle="modal" data-target="#projectModal" onclick="loadIframe(src='//storage.net-fs.com/hosting/8311954/1/', name='Rajshree - Aranya Heights')">
                     <!-- <i class="fa fa-2x fa-plus text-white"></i> -->
                     <p>RAJSHREE ARANYA<br><span class="info-span">Aerial 360° Tour</span></p>
                 </a>
             </div>
             <div class="project-item">
-                <img class="img-fluid w-100" src="img/lotus.png" alt="">
-                <a class="btn btn-project" href="img/lotus.png" data-toggle="modal" data-target="#projectModal" onclick="loadIframe(src='//lotus-drone-view.netlify.app/', name='Lotus Developers')">
+                <img class="img-fluid w-100" src="img/lotus.webp" alt="">
+                <a class="btn btn-project" href="img/lotus.webp" data-toggle="modal" data-target="#projectModal" onclick="loadIframe('//lotus-drone-view.netlify.app/', 'Lotus Developers')">
                     <!-- <i class="fa fa-2x fa-plus text-white"></i> -->
                     <p>LOTUS DEVELOPERS<br><span class="info-span">Aerial 360° Tour</span></p>
                 </a>
             </div>
             <div class="project-item">
-                <img class="img-fluid w-100" src="img/pebble.png" alt="">
-                <a class="btn btn-project" href="img/pebble.png" data-toggle="modal" data-target="#projectModal" onclick="loadIframe(src='//storage.net-fs.com/hosting/8277896/1/', name='Pebble House')">
+                <img class="img-fluid w-100" src="img/pebble.webp" alt="">
+                <a class="btn btn-project" href="img/pebble.webp" data-toggle="modal" data-target="#projectModal" onclick="loadIframe(src='//storage.net-fs.com/hosting/8277896/1/', name='Pebble House')">
                     <!-- <i class="fa fa-2x fa-plus text-white"></i> -->
                     <p>THE PEBBLE HOUSE<br><span class="info-span">Virtual Tour</span></p>
                 </a>
             </div>
             <div class="project-item">
-                <img class="img-fluid w-100" src="img/anmol.png" alt="">
-                <a class="btn btn-project" href="img/anmol.png" data-toggle="modal" data-target="#projectModal" onclick="loadIframe(src='//storage.net-fs.com/hosting/8277896/3/', name='Anmol Residency')">
+                <img class="img-fluid w-100" src="img/anmol.webp" alt="">
+                <a class="btn btn-project" href="img/anmol.webp" data-toggle="modal" data-target="#projectModal" onclick="loadIframe(src='//storage.net-fs.com/hosting/8277896/3/', name='Anmol Residency')">
                     <!-- <i class="fa fa-2x fa-plus text-white"></i> -->
                     <p>ANMOL RESIDENCY<br><span class="info-span">Interactive Virtual Tour</span></p>
                 </a>
             </div>
             <div class="project-item">
-                <img class="img-fluid w-100" src="img/nyshaa.png" alt="">
-                <a class="btn btn-project" href="img/nyshaa.png" data-toggle="modal" data-target="#projectModal" onclick="loadIframe(src='//nyshaa-space-builder.netlify.app/', name='Nyshaa Space')">
+                <img class="img-fluid w-100" src="img/nyshaa.webp" alt="">
+                <a class="btn btn-project" href="img/nyshaa.webp" data-toggle="modal" data-target="#projectModal" onclick="loadIframe(src='//nyshaa-space-builder.netlify.app/', name='Nyshaa Space')">
                     <!-- <i class="fa fa-2x fa-plus text-white"></i> -->
                     <p>NYSHAA SPACE<br><span class="info-span">Aerial 360° Tour</span></p>
                 </a>
             </div>
             <div class="project-item">
-                <img class="img-fluid w-100" src="img/nexome.png" alt="">
-                <a class="btn btn-project" href="img/nexome.png" data-toggle="modal" data-target="#projectModal" onclick="loadIframe(src='//storage.net-fs.com/hosting/8277896/2/', name='Nexome - Altava')">
+                <img class="img-fluid w-100" src="img/nexome.webp" alt="">
+                <a class="btn btn-project" href="img/nexome.webp" data-toggle="modal" data-target="#projectModal" onclick="loadIframe(src='//storage.net-fs.com/hosting/8277896/2/', name='Nexome - Altava')">
                     <!-- <i class="fa fa-2x fa-plus text-white"></i> -->
                     <p>NEXOME ALTAVA<br><span class="info-span">Virtual Tour</span></p>
                 </a>
@@ -308,21 +312,35 @@
     </div>
     <!-- Gallery End -->
 
-    <!-- Team Start -->
-    <div class="container-fluid py-5" id="team">
+    <!-- Client's scroller -->
+    <div class="container-fluid py-5" id="clients">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
-                <h3 class="text-uppercase text-primary mb-3" style="letter-spacing: 2px;">A Message</h3>
-                <h1 class="font-secondary display-4">From our Founder</h1>
+                <h3 class="text-uppercase text-primary mb-3" style="letter-spacing: 2px;">Our Clients</h3>
+                <h1 class="font-secondary display-4">Our Esteemed Clients</h1>
             </div>
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <!-- <img class="img-fluid" src="img/founder.jpg" alt=""> -->
-                    <iframe class="img-fluid fluid-frame mb-4 mb-lg-0" frameborder="0" src="https://drive.google.com/file/d/1UuOIIhNfcrBwMb3nCojru342KfPBPXVh/preview"></iframe>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="owl-carousel client-carousel">
+                        <img src="../img/logo-search-grid-1x.png" alt="">
+                        <img src="../img/logo-search-grid-2x.png" alt="">
+                        <img src="../img/logo-search-grid-1x.png" alt="">
+                        <img src="../img/logo-search-grid-2x.png" alt="">
+                        <img src="../img/logo-search-grid-1x.png" alt="">
+                        <img src="../img/logo-search-grid-2x.png" alt="">
+                        <img src="../img/logo-search-grid-1x.png" alt="">
+                        <img src="../img/logo-search-grid-2x.png" alt="">
+                        <img src="../img/logo-search-grid-1x.png" alt="">
+                        <img src="../img/logo-search-grid-2x.png" alt="">
+                        <img src="../img/logo-search-grid-1x.png" alt="">
+                        <img src="../img/logo-search-grid-2x.png" alt="">
+                        <img src="../img/logo-search-grid-1x.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Client's scroller end -->
 
     <!-- Testimonial Start -->
     <div class="container-fluid py-5" id="testimonial">
@@ -352,6 +370,23 @@
         </div>
     </div>
     <!-- Testimonial End -->
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5" id="team">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h3 class="text-uppercase text-primary mb-3" style="letter-spacing: 2px;">A Message</h3>
+                <h1 class="font-secondary display-4">From our Founder</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <!-- <img class="img-fluid" src="img/founder.jpg" alt=""> -->
+                    <iframe class="img-fluid fluid-frame mb-4 mb-lg-0" frameborder="0" src="https://drive.google.com/file/d/1UuOIIhNfcrBwMb3nCojru342KfPBPXVh/preview"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
 
     <!-- Contact Start -->
     <div class="container-fluid py-5" id="contact">
@@ -415,7 +450,7 @@
                     <div class="col-md-4">
                         <div class="text-md-center">
                             <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">Call Us</h5>
-                            <a class="m-0s" href="tel:917710000963" style="color: white;">+91 7710000963</a>
+                            <a class="m-0s" href="tel:+917710000963" style="color: white;">+91 7710000963</a>
                         </div>
                     </div>
                 </div>
@@ -423,7 +458,7 @@
         </div>
     </div>
     <div class="container-fluid bg-dark text-white text-center border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .05) !important;">
-        <p class="m-0 text-white">&copy; <a href="#">tech-triq.com</a>. All Rights Reserved. Designed by <a href="https://infinitysquaredtech.com" target="_blank">Infinity Squard Technologies</a></p>
+        <p class="m-0 text-white">&copy; <span id="currentYear"></span> <a href="#">tech-triq.com</a>. All Rights Reserved. Designed by <a href="https://infinitysquaredtech.com" target="_blank">Infinity Squared Technologies</a></p>
     </div>
     <!-- Footer End -->
 
@@ -455,7 +490,14 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        if (typeof jQuery == 'undefined') {
+            var script = document.createElement('script');
+            script.src = '../lib/jquery/jquery-3.7.1.min.js';
+            document.head.appendChild(script);
+        }
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
@@ -467,8 +509,17 @@
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 
+    <script>
+        function closeIframe() {
+            const iframe = document.getElementById('projectFrame');
+            iframe.src = '';
+        }
+    </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>

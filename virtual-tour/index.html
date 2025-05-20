@@ -41,8 +41,8 @@
             </a>
             <div class="navbar-nav ml-auto py-0">
                 <a href="/" class="nav-item nav-link active">Home</a>
-                <a href="#service" class="nav-item nav-link">Features</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
+                <a href="#service" class="nav-item nav-link" onclick=closeNavbarOnClick()>Features</a>
+                <a href="#contact" class="nav-item nav-link" onclick=closeNavbarOnClick()>Contact</a>
             </div>
         </div>
     </nav>
@@ -128,7 +128,7 @@
                 <div class="col-lg-5">
                     <h3 class="text-uppercase text-primary mb-3" style="letter-spacing: 2px;">Easy to Share</h3>
                     <h1 class="display-4 mb-3">Increased <span class="text-primary">Marketing Opportunities</span></h1>
-                    <p>Beyond the immersive experience, our virtual tours unlock a powerful marketing advantage. With a simple web link, you can instantly share the tour with your network, clients, colleagues, and potential buyers, eliminating the need for cumbersome email attachments or lengthy video uploads. This frictionless sharing dramatically increases visibility, expands your reach, and transforms your property listing into a dynamic, easily-distributable asset, fueling a vibrant wave of interest and accelerating the sales process</p>
+                    <p>Our virtual tours provide a powerful marketing advantage - a simple web link allows you to instantly share the immersive experience with your network, clients, colleagues, and potential buyers. This frictionless sharing dramatically increases visibility, expands your reach, and transforms your property listing into a dynamic, easily-distributable asset, fueling interest and accelerating the sales process</p>
                 </div>
                 <div class="col-lg-7">
                     <video class="content-video w-100 h-100" autoplay loop muted playsinline>
@@ -321,7 +321,7 @@
                     <div class="col-md-4">
                         <div class="text-md-center">
                             <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">Call Us</h5>
-                            <a class="m-0s" href="tel:917710000963" style="color: white;">+91 7710000963</a>
+                            <a class="m-0s" href="tel:+917710000963" style="color: white;">+91 7710000963</a>
                         </div>
                     </div>
                 </div>
@@ -329,7 +329,7 @@
         </div>
     </div>
     <div class="container-fluid bg-dark text-white text-center border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .05) !important;">
-        <p class="m-0 text-white">&copy; <a href="#">tech-triq.com</a>. All Rights Reserved. Designed by <a href="https://infinitysquaredtech.com" target="_blank">Infinity Squard Technologies</a></p>
+        <p class="m-0 text-white">&copy; <span id="currentYear"></span> <a href="#">tech-triq.com</a>. All Rights Reserved. Designed by <a href="https://infinitysquaredtech.com" target="_blank">Infinity Squared Technologies</a></p>
     </div>
     <!-- Footer End -->
 
@@ -342,13 +342,20 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        if (typeof jQuery == 'undefined') {
+            var script = document.createElement('script');
+            script.src = '../lib/jquery/jquery-3.7.1.min.js';
+            document.head.appendChild(script);
+        }
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="../lib/easing/easing.min.js"></script>
     <script src="../lib/waypoints/waypoints.min.js"></script>
     <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="../lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="../lib/lightbox/js/lightbox.min.js"></script>
+    <script src="../js/main.js" defer></script>
 
     <!-- Contact Javascript File -->
     <script src="../mail/jqBootstrapValidation.min.js"></script>
@@ -356,6 +363,9 @@
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
