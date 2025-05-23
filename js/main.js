@@ -120,7 +120,7 @@
         loop: true,
         nav : false,
         responsive: {
-            0: { items: 2 },
+            0: { items:3 },
             576: { items: 4 },
             768: { items: 6 },
             992: { items: 8 }
