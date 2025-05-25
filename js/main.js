@@ -163,23 +163,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     countUpElements.forEach(function(element) {
       var targetValue = parseInt(element.getAttribute('data-target'));
-      var startValue = 0;
-      var duration = 7500;
+      var duration = 3500;
+      var startTimestamp = null;
 
-      var step = function() {
-        var progress = startValue / targetValue;
-        element.textContent = Math.floor(startValue);
+      function step(timestamp) {
+        if (!startTimestamp) startTimestamp = timestamp;
+        var progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        var currentValue = Math.floor(progress * targetValue);
+
+        element.textContent = "Projects Done: " + currentValue + " +";
 
         if (progress < 1) {
           window.requestAnimationFrame(step);
-          startValue += targetValue / (duration / 16);
-          element.textContent = "Projects Done: " + Math.floor(startValue) + " +";
         } else {
           element.textContent = "Projects Done: " + targetValue + " +";
         }
-      };
+      }
 
-      step();
+      window.requestAnimationFrame(step);
     });
 });
 
