@@ -13,6 +13,12 @@ $(function () {
             $this.prop("disabled", true);
 
             const formData = new FormData(form);
+
+            // Add the subject to the form data
+            const sub = formData.get('subject');
+            const subject = `Enquiry - ${sub}`;
+            formData.set('subject', subject);
+
             const object = Object.fromEntries(formData);
             const json = JSON.stringify(object);
 
@@ -25,14 +31,23 @@ $(function () {
                     body: json
                 })
                 .then(async (response) => {
-                    $('#success').html("<div class='alert alert-success'>");
-                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                            .append("</button>");
-                    $('#success > .alert-success')
-                            .append("<strong>Your message has been sent, " + name + "</strong>");
-                    $('#success > .alert-success')
-                            .append('</div>');
-                    $('#contactForm').trigger("reset");
+                    if (response.status == 200) {
+                        $('#success').html("<div class='alert alert-success'>");
+                        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                                .append("</button>");
+                        $('#success > .alert-success')
+                                .append("<strong>Your message has been sent, " + name + "</strong>");
+                        $('#success > .alert-success')
+                                .append('</div>');
+                        $('#contactForm').trigger("reset");
+                    } else {
+                        $('#success').html("<div class='alert alert-danger'>");
+                        $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                                .append("</button>");
+                        $('#success > .alert-danger').append($("<strong>").text("Sorry " + name + ", it seems that our mail server is not responding. Please try again later!"));
+                        $('#success > .alert-danger').append('</div>');
+                        $('#contactForm').trigger("reset");
+                    }
                 })
                 .catch(error => {
                     $('#success').html("<div class='alert alert-danger'>");
