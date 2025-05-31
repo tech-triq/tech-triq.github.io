@@ -9810,3 +9810,7 @@ h4, h5, h6 {
   font-size: 1.25rem;
   font-weight: 400;
 }
+
+.logo {
+  padding: 10px;
+}
